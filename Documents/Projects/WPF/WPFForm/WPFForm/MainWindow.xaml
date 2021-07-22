@@ -1,0 +1,103 @@
+﻿<Window Background="Teal" x:Class="WPFForm.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPFForm"
+        mc:Ignorable="d"
+        Title="Login Form Window" Height="1100" Width="1100">
+    <StackPanel>
+        <Label x:Name="calender" HorizontalAlignment="Center">
+                Calender will be here to show currrent date for you:
+            </Label>
+                <Calendar HorizontalAlignment="Center">
+        </Calendar>
+        <Label>
+            <StackPanel Orientation="Horizontal">
+                <Image Width = "70" Source= "https://pics.freeicons.io/uploads/icons/png/13764952091536837650-512.png"/>
+                <AccessText x:Name="access" Text="Login Form">
+                </AccessText>
+            </StackPanel>
+        </Label>
+        <TextBlock x:Name="text">
+         <Bold>Hello, please enter you login information below:</Bold>
+        </TextBlock>
+        <StackPanel Orientation="Vertical">
+            <AccessText HorizontalAlignment="Center" x:Name="atext" Text="UserName:">
+            </AccessText>
+            <Image Width = "30" Source="https://pics.freeicons.io/uploads/icons/png/19339625881548233621-512.png"/>
+        
+            <TextBox x:Name="textBox" Width="500" Margin="15" 
+                 TextWrapping="Wrap" SpellCheck.IsEnabled="True"
+                 Language="en-US"
+                 ></TextBox>
+                
+        </StackPanel>
+
+        <Label HorizontalAlignment="Center" x:Name="password">Password:</Label>
+        <Image Width="30" Source="https://pics.freeicons.io/uploads/icons/png/6306108681578466232-512.png"/>
+        <PasswordBox x:Name="pass" Width="500" Margin="15">
+            
+        </PasswordBox>
+
+        <Label x:Name="radio" FontWeight="Bold">Do you want to sign up for the mailing list to receive important information about your account?</Label>
+        <RadioButton GroupName="choice" x:Name="radio1" FontSize="20" HorizontalAlignment="Center">
+            <WrapPanel>
+                <Label x:Name="yes">
+                    Yes
+                    </Label>
+                <Image Width="30" Source="https://pics.freeicons.io/uploads/icons/png/6549974331557740369-512.png"/>
+            </WrapPanel>
+        </RadioButton>
+        <RadioButton GroupName="choice" x:Name="radio2" FontSize="20" HorizontalAlignment="Center">
+            <WrapPanel>
+                <Label x:Name="no">
+                    No
+                </Label>
+                <Image Width="30" Source="https://pics.freeicons.io/uploads/icons/png/7460847501536572528-512.png"/>
+            </WrapPanel>
+        </RadioButton>
+
+        <Label HorizontalAlignment="Center" x:Name="radios" FontWeight="Bold">Do you need to signup for an account?</Label>
+        <RadioButton GroupName="answer" x:Name="radiobutton" FontSize="20" HorizontalAlignment="Center">
+            <WrapPanel>
+                <Label x:Name="radiosYes">
+                    Yes
+                </Label>
+                <Image Width="50" Source="https://pics.freeicons.io/premium/form-dropdown-formbuilder-input-icon-89332-256.png"/>
+            </WrapPanel>
+        </RadioButton>
+        <RadioButton GroupName="answer" x:Name="radiobutton2" FontSize="20" HorizontalAlignment="Center">
+            <WrapPanel>
+                <Label x:Name="radiosNo">
+                    No
+                </Label>
+                <Image Width="50" Source="https://pics.freeicons.io/premium/checklist-clipboard-note-form-icon-91688-256.png"/>
+            </WrapPanel>
+        </RadioButton>
+
+
+        <StackPanel Orientation="Horizontal"  HorizontalAlignment="Center">
+            <Button 
+            x:Name = "loginButton"
+            HorizontalAlignment="Center"
+            Width="90"
+            Margin="15"
+            Content="Login"
+            Click="loginButton_Click"
+            ToolTip="Login"></Button>
+            
+            <Button 
+            x:Name = "cancelButton"
+            HorizontalAlignment="Center"
+            Width="90"
+            Margin="15"
+            Content="Cancel"
+            Click="cancelButton_Click"
+            ToolTip="Cancel"></Button>
+            </StackPanel>
+        <Image Width="150" Source="https://cdn.cokesbury.com/images/products/Large/720/730817357720.jpg">
+        </Image>
+    </StackPanel>
+    
+</Window>
